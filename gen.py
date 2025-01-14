@@ -8,14 +8,7 @@ sys.path.append(parent_dir_path)
 
 import inspect
 import ruamel.yaml
-
-from rllte import common
-from rllte import env
-from rllte import evaluation
-from rllte import agent
-from rllte.hub import datasets, models
-from rllte.xploit import encoder, policy, storage
-from rllte.xplore import distribution, reward, augmentation
+from scripts import main
 
 pages = {
     'sources_dir': 'docs/api_docs',
@@ -25,8 +18,7 @@ pages = {
     'pages': []
 }
 
-for module in [common, encoder, agent, storage, policy, datasets, models,
-           reward, augmentation, distribution, env, evaluation]:
+for module in [main]:
     last_file = None
     save_old = False
     for name, item in inspect.getmembers(module):
