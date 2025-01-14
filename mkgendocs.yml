@@ -1,1 +1,9 @@
+sources_dir: docs/
+templates_dir:
+repo: https://github.com/mandeepnh5/autogenerate-docs
+version: main
 pages:
+  - page: scripts\main.md
+    source: scripts/scripts\main.py
+    functions:
+      - hello
